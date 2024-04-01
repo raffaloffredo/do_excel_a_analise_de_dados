@@ -19,10 +19,7 @@ O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3
 
 ## Materiais Extras
 - [Google Sheets](https://docs.google.com/spreadsheets/d/1xjK3cCBwy22l8hRtdHqtwlkmtKMcYdc-PpjMIuxAN1c/edit#gid=0) - planilha utilizada com os dados originais obtido da B3 e o desevolvimento da análise de dados (explicação abaixo).
-<br/>
-<p align="center">
-  <img src="">
-</p>
+
 <br/>
 
 ## Desevolvimento
@@ -192,38 +189,48 @@ Primeiro criei a coluna Faixa Idade que puxa as informações da planilha Princi
 <br/>
 
 ## Análise Gráfica
-
 Para tornar a análise mais fácil e rápida de ser compreendida foram construídos gráficos.
 
-1. Variação das ações que subiram x Segmento
-    
-    Para visualizar os segmentos que mais subiram no dia foi construído um gráfico de pizza com suas respectivas representações em porcentagens.
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/747eb5a6-5bf1-479f-8ad5-1ff411ae8f75/Untitled.png)
-    
-2. Variação de Volume por Resultado
-    
-    Utilizei um gráfico de cascata, bem comum no ramo das finanças, para mostrar de quanto foi o volume financeiro das ações que subiram e desceram no dia.
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/a98462f1-b038-4d82-87fe-01e9ef2a1d0e/Untitled.png)
-    
+<br/>
 
-1. Variação de Volume x Faixa de Idade
-    
-    Outro gráfico de barras foi feito para mostrar o volume financeiro movimentado no dia de acordo com a faixa de idade das empresas.
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/1518f696-7ae8-403d-8379-dd169ecb4f34/Untitled.png)
-    
-2. Quantidade de Empresas x Faixa de Idade
-    
-    Por fim, um gráfico de pizza nos ajuda a entender a quantidade de empresas por faixa etária.
-    
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/8e36a061-af05-40da-8493-ba1faf632238/Untitled.png)
-    
+### Variação das ações que subiram x Segmento
+Para visualizar os segmentos que mais subiram no dia foi construído um gráfico de pizza com suas respectivas representações em porcentagens.
 
-### Análise de Dados com Python
+<br/>
+<p align="center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJXy4ztRSziQwtt5o-M6udm2p3btku5DbDYj4bIJuJZGQrk_tZT4xYHH5wo8sYKPzqb-7UPjOOuQ9gl78YcIpiQZSO94Gl-UMv3rU7hyp1XT2H46gyFwqD02wa7oau_KNBVadXrvJv7myYr3sbnPxhR8FVMmeoEPsi5KPsE_19n9ekx_J5gO2oz9nv2zQ/s16000/1.png">
+</p>
+<br/>
+    
+### Variação de Volume por Resultado
+Utilizei um gráfico de cascata, bem comum no ramo das finanças, para mostrar de quanto foi o volume financeiro das ações que subiram e desceram no dia.
+    
+<br/>
+<p align="center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgeHwLpw3dtah_D_WNzyjSXzvFMG1Mdfi8cjEYH5bdDO0aZGsuz6VGC4It9Pyg7lytP34cmennZLJS4ulefXBH1Kc3THgS0CLC8dK1eSMAaoyf1x5UyW0jHB_WcPfZlKpKUWNKne5xyZm62qdmX95-QNoUzTNtI7clSMe2bjTo590lTWh-2H2MDp_Wc7PM/s16000/2.png">
+</p>
+<br/>
+    
+### Variação de Volume x Faixa de Idade
+Outro gráfico de barras foi feito para mostrar o volume financeiro movimentado no dia de acordo com a faixa de idade das empresas.
 
-[Material](https://colab.research.google.com/drive/1Eic1tLm4vQCHpeaf_M5qNtjTTXLRPDTS?usp=sharing)
+<br/>
+<p align="center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0V7gpjGKD3iCHGv9WX56WqFd0j3FW6m6Cc6akIA_rIbwd0k_4JGxduHVNROjRqI2okoGLQQ-8nmsMGcRbXRPfOyR2bCVSNKukutUDpUplRqX8oHMak-fbpEcQzyhcxhst4DFARXb3nAKCjQkXy_6OvIBLKnfi8uwEjFDyNUt-eiVQG8r4Y3ySGwT3s6A/s16000/3.png">
+</p>
+<br/>
+    
+### Quantidade de Empresas x Faixa de Idade
+Por fim, um gráfico de pizza nos ajuda a entender a quantidade de empresas por faixa etária.
+    
+<br/>
+<p align="center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitOtQRGME1AQyYQW9_HOES73nf6erX8VSdQhWSQUPQ8UxAp-KVdEYXcpKJ2rullJd9FWZ0G08MZSJGODSle4NYX9THktc2cFT__0auIkftBiBumSL28nTIm9hK1Dlw5M2XWlXiK-v5cs9x-N6X0czFYIdz_IbaRl74bT-8fiFP3adNizpaxHsrhk4b1xk/s16000/4.png">
+</p>
+<br/>
+    
+## Análise de Dados com Python
+
 
 
 
