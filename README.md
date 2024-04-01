@@ -15,8 +15,11 @@ O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3
 - [Google Sheets](https://www.google.com/sheets/about/) - criação e manipulação de planilhas
 - [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para análise de dados, criação de gráficos e do algoritmo para previsão de demanda
 - [Pandas](https://pandas.pydata.org/docs/) - biblioteca Python paara manipulação de dados
-- [Plotly Express](https://plotly.com/python/plotly-express/) - biblioteca Python para criação de gráficos
-
+- [Matplotlib](https://matplotlib.org/) - biblioteca Python para criação de gráficos (`pyplot`) e de manipulaão de datas em gráficos (`dates`)
+- [Mplfinance](https://github.com/matplotlib/mplfinance/) - biblioteca Pyhton para vizualização de dados financeiros
+- [Yfinance](https://github.com/ranaroussi/yfinance) - biblioteca Python para extração de dados financeiros
+- [Plotly](https://plotly.com/python/) - biblioteca Python para (`graph_objects`) uma interface orientada à objetos para criação de gráficos, para (`subplots`) criação de múltiplos plots em uma mesma figura e (`express`) para criação de gráficos de forma rápida
+  
 <br/>
 
 ## Materiais Extras
@@ -235,9 +238,9 @@ Por fim, um gráfico de pizza nos ajuda a entender a quantidade de empresas por 
 ## Análise de Dados com Python
 A etapa seguinte conssitiu em replicar tudo o que foi feito nas planilhas no Google Colab utilizando código Pyhton e as bibliotecas Pandas e Plotly Express. Acesse o arquivo: [Análise de Dados com Python](https://colab.research.google.com/drive/17NRRSEkJi4vtzq9gmi5Q98_4YUJnc7s-?usp=sharing) para ver o projeto completo.
 
+Em um segundo momento, utilizado a biblioteca do Yahoo Finance `yfinance`, criou-se um gráfico interativo de candlestick, bem comum na área de finanças.
 
-
-
+<br/>
 
 ## Outros projetos
 
