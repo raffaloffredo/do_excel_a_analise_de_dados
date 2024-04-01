@@ -14,11 +14,14 @@ O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3
 ## Ferramentas utilizadas
 - [Google Sheets](https://www.google.com/sheets/about/) - criação e manipulação de planilhas
 - [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para análise de dados, criação de gráficos e do algoritmo para previsão de demanda
+- Pandas - biblioteca Python paara manipulação de dados
+- Plotly Express - biblioteca Python para criação de gráficos
 
 <br/>
 
 ## Materiais Extras
 - [Google Sheets](https://docs.google.com/spreadsheets/d/1xjK3cCBwy22l8hRtdHqtwlkmtKMcYdc-PpjMIuxAN1c/edit#gid=0) - planilha utilizada com os dados originais obtido da B3 e o desevolvimento da análise de dados (explicação abaixo).
+- [Google Colab - Análise de Dados com Python](https://colab.research.google.com/drive/17NRRSEkJi4vtzq9gmi5Q98_4YUJnc7s-?usp=sharing) - arquivo desenvolvido em Python para replicar a análise de dados feita em excel, porém com uso de código que é replicável, biblioteca Pandas e  Plotly Express.
 
 <br/>
 
@@ -230,6 +233,8 @@ Por fim, um gráfico de pizza nos ajuda a entender a quantidade de empresas por 
 <br/>
     
 ## Análise de Dados com Python
+A etapa seguinte conssitiu em replicar tudo o que foi feito nas planilhas no Google Colab utilizando código Pyhton e as bibliotecas Pandas e Plotly Express. Acesse o arquivo: [Análise de Dados com Python](https://colab.research.google.com/drive/17NRRSEkJi4vtzq9gmi5Q98_4YUJnc7s-?usp=sharing) para ver o projeto completo.
+
 
 
 
