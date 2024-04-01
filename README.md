@@ -14,8 +14,8 @@ O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3
 ## Ferramentas utilizadas
 - [Google Sheets](https://www.google.com/sheets/about/) - criação e manipulação de planilhas
 - [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para análise de dados, criação de gráficos e do algoritmo para previsão de demanda
-- Pandas - biblioteca Python paara manipulação de dados
-- Plotly Express - biblioteca Python para criação de gráficos
+- [Pandas](https://pandas.pydata.org/docs/) - biblioteca Python paara manipulação de dados
+- [Plotly Express](https://plotly.com/python/plotly-express/) - biblioteca Python para criação de gráficos
 
 <br/>
 
