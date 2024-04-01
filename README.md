@@ -117,6 +117,116 @@ Cuja fórmula ficou assim: `=IF(D2 > 100; "Mais de 100 anos"; if(D2 < 50; "Menos
 
 <br/>
 
+## Análise dos Dados
+Vamos agora analisar os dados da nossa planilha.
+
+<br/>
+
+### Maior, menor e média de variação em volume financeiro R$
+Vamos identificar de forma fácil qual foi a maior e a menor variação em volume monetário (R$) que ocorreu no dia (e quais empresas são essas), bem como o valor médio. Para isso vou usar a função MAX que ficou `=MAX(Principal!W:W)`, a função MIN que ficou `=MAX(Principal!W:W)` e a função AVERAGE para calcular a média que ficou assim `=AVERAGE(Principal!W:W)`.
+    
+<br/>
+
+### Média segregada por empresas que subiram e das que desceram
+O valor da média como calculado acima pode não trazer a melhor informação quando queremos saber qual a média da variação em volume financeiro das empresas que subiram e das que desceram. Por isso, criei separadamente a média para esses casos utilizando a função AVERAGEIF:
+- Média de Variação R$ ↑: `=AVERAGEIF(Principal!X:X; "Subiu"; Principal!W:W)`
+- Média de Variação R$ ↓: `=AVERAGEIF(Principal!X:X; "Desceu"; Principal!W:W)`
+
+<br/>
+  
+### Identificar as empresas
+De nada adianta termos os valores se não soubermos quem foi a empresa com a maior ou a menor variação. Vamos identificar esses valores com o uso das funções INDEX e MATCH. Não é possível utilizar o VLOOKUP nesse caso em específico porque essa função permite localizar valores que estão à direita da tabela onde o valor inicial é buscado e no nosso caso o valor a ser pesquisado está à esquerda.
+    
+Temos então: `=INDEX(Principal!B:B; MATCH(B1; Principal!W:W; 0))`, onde:
+- `MATCH(B1; Principal!W:W; 0)` irá procurar o valor que está na célula B1 na coluna W da tabela Principal, sendo que o 0 indica que queremos apenas a correspondência exata.
+- `INDEX(Principal!B:B`) serve para retornar o valor correspondente ao encontrado no MATCH na coluna B da tabela Principal.
+
+<br/>
+
+Para a menor variação a fórmula é semelhante, só mudando a célula com o valor a ser buscado que é a B2: `=INDEX(Principal!B:B; MATCH(B2; Principal!W:W; 0))`.
+
+<br/>
+
+### Análise de dados por Segmento
+Vou reunir as informações por segmento para uma análise mais específica. Primeiro, crio a coluna segmento e puxo das informações da coluna de Segmento da planilha Principal. Para isso uso a função UNIQUE que não irá duplicar essa informação: `=UNIQUE(Principal!C:C)`.
+    
+Na coluna seguinte vou trazer a informação de variação de volume financeiro por segmento. Para isso preciso usar a função SUMIF pois irá somar somente se cumprir com uma condicional, ou seja, se for do mesmo segmento. A fórmula ficou assim: `=SUMIF(Principal!C:C; A11; Principal!W:W)`, onde:
+- `Principal!C:C` indica a coluna que está o valor que queremos
+- `A11` informa qual o valor que queremos encontrar
+- `Principal!W:W`  é a coluna que tem o valor correspondente que será somado
+
+<br/>
+
+### Participação de cada segmento dentro do segmento 
+Ainda na análise se segmento, gostaria de indicar qual foi a participação de cada segmento em relação ao seu segmento em si. Com isso temos dois critérios:
+1. Tem que ser do mesmo segmento
+2. A ação tem que ter subido
+
+<br/>
+
+Para isso vou usar a função SUMIFS que consegue atender mais de um critério para realizar uma soma. A fórmula ficou assim: `=SUMIFS(Principal!W:W; Principal!C:C; A11; Principal!X:X; "Subiu")`, onde:
+- `Principal!W:W;` é a coluna que tem o valor que queremos somar
+- `Principal!C:C;` corresponde ao primeiro critério, ou seja, do segmento
+- `A11;`  indica qual o segmento que estamos buscando para essa soma
+- `Principal!X:X;` inserimos a coluna que tem a informação do nosso segundo critério
+- `"Subiu"` e esse nosso segundo critério irá somar apenas se a empresa teve uma variação positiva nas ações, ou seja, se o preço dela subiu
+
+<br/>
+
+### Qual a relação entre as ações que subiram e as que desceram?
+Para responder a essa pergunta criei uma seção de Resultado, onde, primeiro identifiquei os tipos de variações possível com a função UNIQUE (`=UNIQUE(Principal!X:X)`). Em seguida, criei uma nova coluna Variação Volume R$ onde vou somar apenas se corresponder ao mesmo resultado.  Logo, a fórmula é `=SUMIF(Principal!X:X; A67; Principal!W:W)`, onde:
+- `Principal!X:X;` a coluna onde devemos procurar nosso critério da soma
+- `A67;` o valor do nosso critério da soma
+- `Principal!W:W` o valor a ser somado
+
+<br/>
+
+### Saldo
+Com as informações do quanto as ações subiram e o quanto elas desceram, é possível saber o valor de saldo somando-os, isto é: `=B67+B69`.
+
+<br/>
+
+### Análise por faixa etária da empresa
+Primeiro criei a coluna Faixa Idade que puxa as informações da planilha Principal com o uso de UNIQUE (`=UNIQUE(Principal!E:E)`). Depois usei SUMIF para somar de forma condicional apenas o valor financeiro de acordo com a faixa etária de cada empresa (`=SUMIF(Principal!E:E; A75; Principal!W:W)`). Por fim, contei a quantidade de empresas em cada faixa usando o COUNTIF, que consegue contar de acordo com uma condição, no caso, a idade da empresa (`=COUNTIF(Principal!E:E; A75)`).
+    
+<br/>
+
+## Análise Gráfica
+
+Para tornar a análise mais fácil e rápida de ser compreendida foram construídos gráficos.
+
+1. Variação das ações que subiram x Segmento
+    
+    Para visualizar os segmentos que mais subiram no dia foi construído um gráfico de pizza com suas respectivas representações em porcentagens.
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/747eb5a6-5bf1-479f-8ad5-1ff411ae8f75/Untitled.png)
+    
+2. Variação de Volume por Resultado
+    
+    Utilizei um gráfico de cascata, bem comum no ramo das finanças, para mostrar de quanto foi o volume financeiro das ações que subiram e desceram no dia.
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/a98462f1-b038-4d82-87fe-01e9ef2a1d0e/Untitled.png)
+    
+
+1. Variação de Volume x Faixa de Idade
+    
+    Outro gráfico de barras foi feito para mostrar o volume financeiro movimentado no dia de acordo com a faixa de idade das empresas.
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/1518f696-7ae8-403d-8379-dd169ecb4f34/Untitled.png)
+    
+2. Quantidade de Empresas x Faixa de Idade
+    
+    Por fim, um gráfico de pizza nos ajuda a entender a quantidade de empresas por faixa etária.
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f7eb1d8c-b5b9-4b44-9595-a60c7cac3e9d/8e36a061-af05-40da-8493-ba1faf632238/Untitled.png)
+    
+
+### Análise de Dados com Python
+
+[Material](https://colab.research.google.com/drive/1Eic1tLm4vQCHpeaf_M5qNtjTTXLRPDTS?usp=sharing)
+
+
+
 ## Outros projetos
 
 * **[Detecção de Fake News com Redes Neurais](https://github.com/raffaloffredo/fake_news_detection_portuguese)**
