@@ -25,6 +25,7 @@ O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3
 ## Materiais Extras
 - [Google Sheets](https://docs.google.com/spreadsheets/d/1xjK3cCBwy22l8hRtdHqtwlkmtKMcYdc-PpjMIuxAN1c/edit#gid=0) - planilha utilizada com os dados originais obtido da B3 e o desevolvimento da análise de dados (explicação abaixo).
 - [Google Colab - Análise de Dados com Python](https://colab.research.google.com/drive/17NRRSEkJi4vtzq9gmi5Q98_4YUJnc7s-?usp=sharing) - arquivo desenvolvido em Python para replicar a análise de dados feita em excel, porém com uso de código que é replicável, biblioteca Pandas e  Plotly Express.
+- [Google Colab - Análise de Dados com Python_Candles](https://colab.research.google.com/drive/1mWu0n1Jw5usKkEGwyuiosYPy7LQBBIkr?usp=sharing) - arquivo desenvolvido em Python para extrair dados do Yahoo Finance (`yfinance`) das ações da Petrobras (PETR4) e criar gráficos.
 
 <br/>
 
@@ -238,7 +239,15 @@ Por fim, um gráfico de pizza nos ajuda a entender a quantidade de empresas por 
 ## Análise de Dados com Python
 A etapa seguinte conssitiu em replicar tudo o que foi feito nas planilhas no Google Colab utilizando código Pyhton e as bibliotecas Pandas e Plotly Express. Acesse o arquivo: [Análise de Dados com Python](https://colab.research.google.com/drive/17NRRSEkJi4vtzq9gmi5Q98_4YUJnc7s-?usp=sharing) para ver o projeto completo.
 
-Em um segundo momento, utilizado a biblioteca do Yahoo Finance `yfinance`, criou-se um gráfico interativo de candlestick, bem comum na área de finanças.
+Em um segundo momento, utilizado a biblioteca do Yahoo Finance `yfinance`, foram extraídos dados da Petrobrás (PETR4) para gerar gráfico de linha, gráfico candlestick e gráfico interativo de candlestick com dados de volume financeiro.
+criou-se um gráfico interativo de candlestick, bem comum na área de finanças. Acesse o arquivo: [Análise de Dados com Python_Candles](https://colab.research.google.com/drive/1mWu0n1Jw5usKkEGwyuiosYPy7LQBBIkr?usp=sharing) para ver o projeto completo.
+
+<br/>
+<p align="center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_xgVEOKF2lVoPejuc9kQqoXpfP46RCk7-cY2p25xHuHcClVw3-r9Tpmb-6th-0u53TzWbhHBkGLEuNsye4SnM3FxkTlOmyTpTaG262OzU2Tyc7qLkoaOXvxSMcnX0BSH9lwCBH2IliaWHCQq2Lq-O29qFoG5Wys48e4iWQ4-mhzI4O199NBfmaQutaaY/s16000/candles.png">
+  Gráfico de candlestick construído com Matplotlib
+</p>
+<br/>
 
 <br/>
 
