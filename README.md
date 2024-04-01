@@ -2,26 +2,32 @@
 </br>
 
 <p align="center">
-  <img src="" width="60%">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4hPNKe6rHPzgsQ1Ocj0L1epCLRdz2z-Uz8oeVxoeyIxEVdqx8DVuTNpOxD-RO-d3DGXrJvVXHfQJrwdjGTh3GQ6hJiDHTMUo6qRFzAVyZo64QUJa2NvBPBcN1D2BI3TAQSm3oebJKALfVneW05F09vjfzv-25QV-HhtwooT2HzWN19Y0paASNXck3Ia8/w640-h366/DALL%C2%B7E-2024-03-17-13.30.png" width="60%">
 </p>
 <br/>
 
 ## Sobre o projeto
+O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3 - e da bolsa dos Estados Unidos para mostrar minhas habilidades com o uso de planilhas, criação de fórmulas para se chegar no resultado obtido, desenvolvimento de análises de dados com criação de gráficos e previsão de séries temporais.
 <br/>
 <br/>
 
 ## Ferramentas utilizadas
 - [Google Sheets](https://www.google.com/sheets/about/) - criação e manipulação de planilhas
-- [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para criação de agoritmo para previsão de demanda
+- [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para análise de dados, criação de gráficos e do algoritmo para previsão de demanda
 
 <br/>
 
 ## Materiais Extras
-
+- [Google Sheets](https://docs.google.com/spreadsheets/d/1xjK3cCBwy22l8hRtdHqtwlkmtKMcYdc-PpjMIuxAN1c/edit#gid=0) - planilha utilizada com os dados originais obtido da B3 e o desevolvimento da análise de dados (explicação abaixo).
 <br/>
 <p align="center">
   <img src="">
 </p>
+<br/>
+
+## Desevolvimento
+
+
 <br/>
 
 ## Outros projetos
