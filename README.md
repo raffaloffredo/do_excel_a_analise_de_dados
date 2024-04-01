@@ -13,24 +13,26 @@ O objetivo desse projeto foi analisar ações de empresa da Bolsa do Brasil - B3
 
 ## Ferramentas utilizadas
 - [Google Sheets](https://www.google.com/sheets/about/) - criação e manipulação de planilhas
-- [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para análise de dados, criação de gráficos e do algoritmo para previsão de demanda
-- [Pandas](https://pandas.pydata.org/docs/) - biblioteca Python paara manipulação de dados
-- [Matplotlib](https://matplotlib.org/) - biblioteca Python para criação de gráficos (`pyplot`) e de manipulaão de datas em gráficos (`dates`)
-- [Mplfinance](https://github.com/matplotlib/mplfinance/) - biblioteca Pyhton para vizualização de dados financeiros
+- [Google Colab](https://colab.research.google.com/) - desenvolvimento e execução de código Python para análise de dados, criação de gráficos e do algoritmo para previsão de preço das ações
+- [Pandas](https://pandas.pydata.org/docs/) - biblioteca Python para manipulação de dados
+- [Matplotlib](https://matplotlib.org/) - biblioteca Python para criação de gráficos (`pyplot`) e de manipulação de datas em gráficos (`dates`)
+- [Mplfinance](https://github.com/matplotlib/mplfinance/) - biblioteca Python para visualização de dados financeiros
 - [Yfinance](https://github.com/ranaroussi/yfinance) - biblioteca Python para extração de dados financeiros
 - [Plotly](https://plotly.com/python/) - biblioteca Python para (`graph_objects`) uma interface orientada à objetos para criação de gráficos, para (`subplots`) criação de múltiplos plots em uma mesma figura e (`express`) para criação de gráficos de forma rápida
+- [Prophet](https://facebook.github.io/prophet/docs/quick_start.html) - biblioteca Python para previsão de séries temporais, desenvolvido pela Meta/Facebook
   
 <br/>
 
 ## Materiais Extras
-- [Google Sheets](https://docs.google.com/spreadsheets/d/1xjK3cCBwy22l8hRtdHqtwlkmtKMcYdc-PpjMIuxAN1c/edit#gid=0) - planilha utilizada com os dados originais obtido da B3 e o desevolvimento da análise de dados (explicação abaixo).
+- [Google Sheets](https://docs.google.com/spreadsheets/d/1xjK3cCBwy22l8hRtdHqtwlkmtKMcYdc-PpjMIuxAN1c/edit#gid=0) - planilha utilizada com os dados originais obtido da B3 e o desenvolvimento da análise de dados (explicação abaixo).
 - [Google Colab - Análise de Dados com Python](https://colab.research.google.com/drive/17NRRSEkJi4vtzq9gmi5Q98_4YUJnc7s-?usp=sharing) - arquivo desenvolvido em Python para replicar a análise de dados feita em excel, porém com uso de código que é replicável, biblioteca Pandas e  Plotly Express.
 - [Google Colab - Análise de Dados com Python_Candles](https://colab.research.google.com/drive/1mWu0n1Jw5usKkEGwyuiosYPy7LQBBIkr?usp=sharing) - arquivo desenvolvido em Python para extrair dados do Yahoo Finance (`yfinance`) das ações da Petrobras (PETR4) e criar gráficos.
+- [Google Colab - Previsão com Prophet](https://colab.research.google.com/drive/1ovy2YADfwSVz3im95d0E30t460MtOLNo?usp=sharing) - arquivo desenvolvido em Python para a construção de algoritmo de previsão do preço das ações da Johnson & Johnson com a biblioteca Prophet.
 
 <br/>
 
-## Desevolvimento
-Aqui axplico detalhadamente o que foi ao longo desse projeto, explicando o raciocínio e decisões tomadas, bem como as fórmulas utilizadas.
+## Desenvolvimento
+Aqui explico detalhadamente o que foi ao longo desse projeto, explicando o raciocínio e decisões tomadas, bem como as fórmulas utilizadas.
 
 <br/>
 
@@ -249,6 +251,14 @@ criou-se um gráfico interativo de candlestick, bem comum na área de finanças.
 </p>
 <br/>
 
+Por fim, foi construído um algoritmo para prever o preço a ação da empresa Johnson & Johnson com o uso da biblioteca Prophet.
+Acesse o arquivo: [Previsão com Prophet](https://colab.research.google.com/drive/1ovy2YADfwSVz3im95d0E30t460MtOLNo?usp=sharing) para ver o projeto completo.
+
+<br/>
+<p align="center">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHLMvslnrgzpi7fzst63VGjTkzPj64ZryFwdshuKzIRJaYazVoz8qNpVRN2PorIXCxCuj5y860cpRMW-vhaC9-i-ZJkbkQyUjjtLXPDVCCi7x5pHTPRGAtmNTgF7sOqYSTyRxrXIVnlSbNGQ8_IQ6HlHTvS0jqS_mBdeajPQmFCfVe5w7Ubi-IltMVAmc/s16000/previsao.png">
+  Gráfico de previsão de preços da ação da Johnson & Johnson construído com Prophet
+</p>
 <br/>
 
 ## Outros projetos
