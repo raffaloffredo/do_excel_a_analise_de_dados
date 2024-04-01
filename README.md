@@ -1,4 +1,4 @@
-# Do Excel à Análise de Dados de Ações da Bolsa Brasil
+# Do Excel à Análise de Dados de Ações de Empresas
 </br>
 
 <p align="center">
@@ -12,6 +12,8 @@
 
 ## Ferramentas utilizadas
 - [Google Sheets](https://www.google.com/sheets/about/) - criação e manipulação de planilhas
+- [Google Colab](https://colab.research.google.com/) - desenvolvimento e excução de código Python para criação de agoritmo para previsão de demanda
+
 <br/>
 
 ## Materiais Extras
